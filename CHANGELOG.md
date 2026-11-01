@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 — 2026-11-01
+
+- Keep the standard MIT license text alone in `LICENSE` so GitHub can recognize it.
+- Preserve all icon notices separately and inside the distributed CSS.
+- Check the project license against GitHub's canonical MIT template during CI.
+- No visual or behavioral CSS changes.
+
 ## 1.0.0 — 2026-11-01
 
 - First standalone theme release, developed from Office Mock Clean 0.4.0.

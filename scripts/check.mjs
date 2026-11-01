@@ -12,7 +12,13 @@ assert.match(manifest.version, /^\d+\.\d+\.\d+$/);
 assert.equal(pkg.version, manifest.version);
 assert.equal(versions[manifest.version], manifest.minAppVersion);
 for (const key of ['name', 'version', 'minAppVersion', 'author']) assert.equal(typeof manifest[key], 'string');
-assert.match(await read('LICENSE'), /MIT License[\s\S]*David Hurtado/);
+const license = await read('LICENSE');
+const copyright = license.match(/^Copyright \(c\) (\d{4}) (.+)$/m);
+assert.ok(copyright, 'Project copyright is present');
+assert.equal(copyright[2], manifest.author);
+const standardMIT = (await read('tests/mit-template.txt')).replace('[year]',copyright[1]).replace('[fullname]',manifest.author);
+const normalizeLicense = text => text.replace(/\s+/g,' ').trim();
+assert.equal(normalizeLicense(license),normalizeLicense(standardMIT), 'LICENSE must contain only the standard MIT text; third-party notices belong in their own file');
 assert.match(await read('THIRD_PARTY_NOTICES.md'), /Lucide[\s\S]*Feather/);
 
 const css = await read('theme.css');

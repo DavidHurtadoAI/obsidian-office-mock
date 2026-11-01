@@ -1,4 +1,4 @@
-# Office Mock 1.0.0
+# Office Mock 1.0.1
 
 Tema independiente para Obsidian con documentos azules, correo azul, reuniones moradas y hojas de cálculo verdes. Tiene interfaz propia en claro y oscuro y respeta las fuentes y el tamaño de texto configurados en Obsidian.
 

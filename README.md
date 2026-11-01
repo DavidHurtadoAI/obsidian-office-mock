@@ -26,7 +26,7 @@ The included Markdown examples, rendered in Obsidian.
 
 Until the theme is listed in Community Themes:
 
-1. Download `Office-Mock-1.0.0.zip` from the [latest release](https://github.com/DavidHurtadoAI/obsidian-office-mock/releases/latest).
+1. Download `Office-Mock-1.0.1.zip` from the [latest release](https://github.com/DavidHurtadoAI/obsidian-office-mock/releases/latest).
 2. Copy the extracted `Office Mock` folder into your vault's `.obsidian/themes/` folder. It must contain `theme.css` and `manifest.json` directly.
 3. Open **Settings → Appearance → Themes** and select **Office Mock**. Restart Obsidian if the new local theme is not yet listed.
 4. Copy the optional `examples` and `templates` folders into your vault.
