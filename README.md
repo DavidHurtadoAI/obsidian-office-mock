@@ -6,6 +6,22 @@ An office-inspired Obsidian theme with document, email, meeting and spreadsheet 
 
 **A visual theme, with native editing.** The ribbons, search box and formula bar are decorative. Typing, text selection, table cells, links, undo and saving are provided by Obsidian. This theme does not calculate spreadsheet formulas, send emails or schedule meetings.
 
+## Example screenshots
+
+The included Markdown examples, rendered in Obsidian.
+
+### Email
+
+![Email example with a blue ribbon, sender and recipient details, attachments and message content](images/email-light-preview.png)
+
+[Markdown example](examples/01%20-%20Propuesta%20comercial.md) · [Dark mode](images/email-dark-preview.png)
+
+### Spreadsheet
+
+![Spreadsheet example with a green ribbon and an invoice table with clients, amounts and payment status](images/spreadsheet-light-preview.png)
+
+[Markdown example](examples/04%20-%20Facturacion%20T3%202026.md) · [Live Preview editing in dark mode](images/spreadsheet-dark-source.png)
+
 ## Install
 
 Until the theme is listed in Community Themes:
