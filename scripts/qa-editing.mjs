@@ -67,7 +67,7 @@ try{
    if(!dark)await screenshot(type+'-editing');
   }
  }
- await open('Being more flexible.md');
+ await open(folder+'/Plain QA.md');
  check('an existing file without cssclasses has the Word page in Live Preview',await run(()=>getComputedStyle(officeEditingQaLeaf.view.contentEl.querySelector('.markdown-source-view')).getPropertyValue('--oc-app-label').trim()==='"Documentos"'));
  // Simula las tres preferencias de Apariencia sin escribir configuración de usuario.
  await run(()=>{document.body.style.setProperty('--font-text-override','Georgia');document.body.style.setProperty('--font-interface-override','Trebuchet MS');document.body.style.setProperty('--font-monospace-override','Consolas');});

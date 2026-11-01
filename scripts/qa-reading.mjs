@@ -121,7 +121,7 @@ try{
   const embeds=[...p.querySelectorAll('.internal-embed')];
   return embeds.length>0&&getComputedStyle(p).getPropertyValue('--oc-app-label').trim()==='"Documentos"'&&embeds.every(e=>[e,...e.querySelectorAll('.markdown-preview-view,.markdown-preview-sizer')].every(x=>!getComputedStyle(x,'::after').backgroundImage.includes('data:image/svg+xml')));
  }));
- await open('Being more flexible.md');
+ await open(fixtureFolder+'/Sin frontmatter QA.md');
  check('an existing file without YAML now has document appearance without changing its contents',await run(()=>getComputedStyle(officeCleanQaLeaf.view.previewMode.containerEl.querySelector('.markdown-preview-view')).getPropertyValue('--oc-app-label').trim()==='"Documentos"'));
  await c.send('Emulation.setDeviceMetricsOverride',{width:1000,height:900,deviceScaleFactor:1,mobile:false});
  for(const note of notes.filter(n=>n.relative.includes('/Ejemplos/'))){
