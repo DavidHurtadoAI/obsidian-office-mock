@@ -1,0 +1,155 @@
+/* Office Mock: native Obsidian interface. Fonts and text size belong to the user. */
+body {
+  --radius-s: 4px;
+  --radius-m: 7px;
+  --radius-l: 10px;
+  --input-radius: 5px;
+  --tab-radius: 7px;
+  --tab-radius-active: 7px;
+  --button-radius: 5px;
+  --file-header-font-size: var(--font-ui-small);
+  --file-header-font-weight: 500;
+  --tab-font-weight: 500;
+  --tab-font-weight-active: 600;
+  --nav-item-weight-active: 600;
+  --nav-item-padding: 5px 8px;
+  --nav-item-color-active: var(--text-accent);
+  --nav-item-background-active: var(--background-modifier-active-hover);
+  --checkbox-radius: 3px;
+  --modal-radius: 12px;
+  --dialog-radius: 12px;
+  --code-radius: 5px;
+  --file-line-width: 780px;
+  --h1-size: 1.9em;
+  --h2-size: 1.45em;
+  --h3-size: 1.15em;
+  --h1-weight: 650;
+  --h2-weight: 600;
+  --h3-weight: 600;
+  --h4-weight: 600;
+  --bold-weight: 600;
+}
+
+.theme-light {
+  --color-base-00: #fff;
+  --color-base-05: #f8f9fc;
+  --color-base-10: #f1f4f8;
+  --color-base-20: #e6eaf0;
+  --color-base-25: #dce2eb;
+  --color-base-30: #cbd4e0;
+  --color-base-35: #b4bfce;
+  --color-base-40: #94a1b3;
+  --color-base-50: #718096;
+  --color-base-60: #526176;
+  --color-base-70: #3d4b5f;
+  --color-base-100: #202d3f;
+  --accent-h: 217;
+  --accent-s: 66%;
+  --accent-l: 43%;
+  --background-primary: #fff;
+  --background-primary-alt: #f8f9fc;
+  --background-secondary: #f1f4f8;
+  --background-secondary-alt: #e9eef5;
+  --background-modifier-border: #d9e0ea;
+  --background-modifier-border-hover: #bac7d7;
+  --background-modifier-border-focus: #2765b9;
+  --background-modifier-active-hover: #dfeaf9;
+  --text-normal: #202d3f;
+  --text-muted: #526176;
+  --text-faint: #65758b;
+  --text-on-accent: #fff;
+  --interactive-accent: #245fae;
+  --interactive-accent-hover: #1c4c8d;
+  --text-accent: #245fae;
+  --text-accent-hover: #1c4c8d;
+  --titlebar-background: #e9eef5;
+  --titlebar-background-focused: #e9eef5;
+  --tab-background-active: #fff;
+  --tab-text-color-active: #1e4e91;
+  --nav-item-color: #40516a;
+  --nav-item-color-hover: #202d3f;
+  --icon-color: #536780;
+  --icon-color-hover: #245fae;
+  --code-background: #eef2f7;
+  --text-selection: #bcd8fa80;
+  --table-header-background: #eef3fa;
+}
+
+.theme-dark {
+  --color-base-00: #17202d;
+  --color-base-05: #1b2635;
+  --color-base-10: #202c3c;
+  --color-base-20: #29384b;
+  --color-base-25: #324359;
+  --color-base-30: #3c4f67;
+  --color-base-35: #4d617a;
+  --color-base-40: #657b96;
+  --color-base-50: #8a9db4;
+  --color-base-60: #a6b5c8;
+  --color-base-70: #c0ccda;
+  --color-base-100: #e7edf5;
+  --accent-h: 215;
+  --accent-s: 77%;
+  --accent-l: 70%;
+  --background-primary: #17202d;
+  --background-primary-alt: #1b2635;
+  --background-secondary: #202c3c;
+  --background-secondary-alt: #243246;
+  --background-modifier-border: #34465e;
+  --background-modifier-border-hover: #546d8a;
+  --background-modifier-border-focus: #85b4f7;
+  --background-modifier-active-hover: #2b4464;
+  --text-normal: #e7edf5;
+  --text-muted: #b0bfd0;
+  --text-faint: #91a4bd;
+  --text-on-accent: #15243a;
+  --interactive-accent: #85b4f7;
+  --interactive-accent-hover: #a6c9fb;
+  --text-accent: #9bc2fb;
+  --text-accent-hover: #c2dbff;
+  --titlebar-background: #202c3c;
+  --titlebar-background-focused: #202c3c;
+  --tab-background-active: #17202d;
+  --tab-text-color-active: #c2dbff;
+  --nav-item-color: #b0bfd0;
+  --nav-item-color-hover: #e7edf5;
+  --icon-color: #a0b2ca;
+  --icon-color-hover: #c2dbff;
+  --code-background: #243246;
+  --text-selection: #487eb366;
+  --table-header-background: #273b54;
+}
+
+.workspace-tab-header.is-active {
+  box-shadow: inset 0 2px var(--interactive-accent);
+}
+
+.view-header {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.workspace-ribbon {
+  border-right: 1px solid var(--background-modifier-border);
+}
+
+.status-bar {
+  --status-bar-radius: 0;
+  --status-bar-border-width: 1px 0 0;
+  --status-bar-background: var(--background-secondary);
+  --status-bar-text-color: var(--text-muted);
+}
+
+/* Native focus remains visible, including keyboard navigation. */
+.clickable-icon:focus-visible,
+button:focus-visible,
+.nav-file-title:focus-visible,
+.nav-folder-title:focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workspace-tab-header {
+    transition: none;
+  }
+}

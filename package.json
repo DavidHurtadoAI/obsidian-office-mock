@@ -1,0 +1,24 @@
+{
+  "name": "office-mock-theme",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "lint": "stylelint theme.css --max-warnings 0",
+    "lint:compat": "node scripts/check-browser-compat.mjs",
+    "check": "npm run build && npm run lint && npm run lint:compat && node scripts/check.mjs",
+    "qa:obsidian": "node scripts/qa.mjs",
+    "package": "node scripts/package.mjs",
+    "qa:layout": "node scripts/qa-layout.mjs"
+  },
+  "devDependencies": {
+    "@csstools/selector-specificity": "^6.0.1",
+    "fflate": "^0.8.3",
+    "postcss": "^8.5.0",
+    "postcss-selector-parser": "^7.1.7",
+    "stylelint": "^17.0.0",
+    "stylelint-config-obsidianmd": "latest"
+  }
+}
