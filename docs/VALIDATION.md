@@ -33,3 +33,7 @@ Native QA does not claim testing on every historical Obsidian version, operating
 Decorative ribbons/search/formula bars remain static. Formula calculation, email delivery, scheduling and native Office file formats are outside the theme. Native text/table editing remains available and the original Markdown is preserved.
 
 A GitHub CI/release check and acceptance by Community Themes are separate. The theme is prepared for submission; no community directory acceptance is claimed.
+
+## 1.0.1 license metadata correction
+
+The project license now matches GitHub's standard MIT template, checked against the fixture in `tests/mit-template.txt`. Third-party notices are preserved byte-for-byte and remain embedded in the distributed CSS. The CSS rules excluding comments were compared with release 1.0.0 and are identical. Static checks, official lint, browser compatibility and all ZIP entry comparisons pass for 1.0.1; the native UI validation above remains the evidence for the unchanged styling.
